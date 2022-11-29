@@ -1,0 +1,15 @@
+//Payments with a specified status in the last 30 days
+db.payments.find({"payment_status.pmt_stat_id":'CLEARED',ods_rec_crtd_dt: {$gte: ISODate('2022-05-23T07:16:54.000Z')}}).count()
+
+//Payments to a given counter party id in the last 30 days
+db.payments.find({cnt_pty_id: 'GB63TXAC47888603060069',ods_rec_crtd_dt: {$gte: ISODate('2022-05-23T07:16:54.000Z')}}).count()
+
+//Payments for a given account number within the last 30 days
+db.payments.find({clnt_acct_no: 'TOJV50793236509806',ods_rec_crtd_dt: {$gte: ISODate('2022-05-23T07:16:54.000Z')}}).count()
+
+//Top 5 highest payments values for a given counter party
+db.payments.find({cnt_pty_id: 'GB63TXAC47888603060069'}).sort({pmt_am:-1}).limit(5)
+
+//How many payments with the category type of TRANSFER in the last 30 days
+db.payments.find({ctgry_typ: 'TRANSFER', ods_rec_crtd_dt: {$gte: ISODate('2022-05-23T07:16:54.000Z')}})
+

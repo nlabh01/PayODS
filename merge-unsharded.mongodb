@@ -1,0 +1,89 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+use("ods");
+
+// db.payments.find( { 'cnt_pty_id': 'GB52JHZL94098319044363' } ).sort( { 'pmt_am': -1 } ).limit(5)
+
+// db.payments.find( {'payment_status.pmt_stat_id':'CLEARED', 'ods_rec_crtd_dt': {'$gte': ISODate('2022-06-20T07:16:54.000+00:00')} } ).sort({'ods_rec_crtd_dt':-1}).limit(5).explain("executionStats")
+
+// indexNames = [ 'shard_idx' ];
+// indexDef = {
+//   'shard_idx': { "clnt_acct_no": 'hashed', "tran_dt": 1 }
+// };
+
+// indexNames.forEach( idx => {
+//   if( coll.getIndexes().find( el => el.name == idx) ) {
+//     print (`${idx} index exists`);
+//   } else {
+//     print( `Creating ${idx}...` );
+//     print( coll.createIndex( indexDef[ idx ], { 'name': idx, 'background': true } ) );
+//   }
+// } );
+// sh.enableSharding( "ods" );
+// results = db.payments2.aggregate( [{ $limit : 1000000 }, { $sort : { 'clnt_acct_no':1 } }, { $group : { _id : '$clnt_acct_no' } }], { allowDiskUse:true } ).toArray();
+// accounts = db.payments2.distinct( 'clnt_acct_no' );
+counterparties = db.payments2.aggregate( [
+  { $group: {
+      _id: { clnt_acct_no : '$clnt_acct_no' },
+      cnt_pty_acct_nos: {
+        $push: '$cnt_pty_acct_no'
+      }
+    }
+  },
+  { $replaceRoot: { newRoot : '$_id' } }
+], { allowDiskUse: true }).toArray();
+
+db.accounts.updateOne( {}, { $unset: {'newaccounts':''}, $set : { 'accounts' : counterparties } } )
+
+// newaccounts = [];
+// newaccounts = results.map( acct => { return acct._id } );
+// print( newaccounts.length );
+// print( JSON.stringify( newaccounts, 0, 2 ) );
+
+// db.accounts.updateOne( { }, { $set : { 'newaccounts': newaccounts }})
+
+// doc = db.accounts.findOne();
+// accounts = doc.accounts;
+// newaccounts = doc.newaccounts;
+// let start, end, count = 0;
+
+// accounts = accounts.slice(201,300)
+// print( accounts.length );
+
+// accounts.forEach( account => {
+//   pipeline = [
+//       { $match : { 'clnt_acct_no' : account } },
+//       { /**
+//        * into: The target collection.
+//        * on: Fields to  identify.
+//        * let: Defined variables.
+//        * whenMatched: Action for matching docs.
+//        * whenNotMatched: Action for non-matching docs.
+//        */
+//         $merge: {
+//           into: 'payments2',
+//           on: [ 'clnt_acct_no', 'tran_dt', '_id' ],
+//           whenMatched: 'keepExisting',
+//           whenNotMatched: 'insert'
+//         }
+//       }
+//   ];
+//   // print( pipeline );
+//   start = new Date();
+//   print( account );
+//   delta = new Date() - start;
+//   before = db.payments2.countDocuments( { 'clnt_acct_no': account } );
+//   results = db.payments.aggregate( pipeline );
+//   // print( `${results.length} - ${results[0].clnt_acct_no} / ${results[0].pmt_id}` );
+//   after = db.payments2.countDocuments( { 'clnt_acct_no': account } );
+//   delta = new Date() - start;
+//   print( `${account}: ${after - before} docs merged in ${delta} ms.` );
+// });
+
+// let delta = end - start;
+// let persec = count / ( delta );
+// print( `${end} - ${count} found in ${delta} ms. ops = ${persec}` );

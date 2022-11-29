@@ -1,0 +1,1076 @@
+{
+   "$id": "https://example.com/payment.schema.2.json",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+   "title": "Payment Event",
+	"description": "Payment Event Description",
+   "type": "object",
+	"properties": {
+		"payment": {
+			"description": "Payment",
+			"type": "object",
+			"properties": {
+			"pmt_id":{
+
+               "description": "Payment Identifier",
+               "type": "string"
+            },
+            "clnt_pty_id":{
+
+               "description": "Client Party Identifier",
+               "type": "string"
+            },
+            "clnt_acct_no":{
+
+               "description": "Client Account Number",
+               "type": "number"
+            },
+            "clnt_rte_no":{
+
+               "description": "Client Routing Number",
+               "type": "number"
+            },
+            "clnt_guid":{
+
+               "description": "Client GUID",
+               "type": "string"
+            },
+            "cnt_pty_id":{
+
+               "description": "Counter Party Identifier",
+               "type": "string"
+            },
+            "cnt_pty_acct_no":{
+
+               "description": "Counter Party Account Number",
+               "type": "string"
+            },
+            "cnt_pty_rte_no":{
+
+               "description": "Counter Party Routing Number",
+               "type": "number"
+            },
+            "cnt_pty_guid":{
+
+               "description": "Counter Party GUID",
+               "type": "number"
+            },
+            "init_pty_id":{
+
+               "description": "Initiating Party Identifier",
+               "type": "string"
+            },
+            "init_guid":{
+
+               "description": "Initiating  GUID",
+               "type": "string"
+            },
+            "ctgry_typ":{
+
+               "description": "Product Category Type",
+               "type": "string"
+            },
+            "ctgry_nm":{
+
+               "description": "Product Category Name",
+               "type": "string"
+            },
+            "prod_nm":{
+
+               "description": "Product Name",
+               "type": "string"
+            },
+            "prod_de":{
+
+               "description": "Product Description",
+               "type": "string"
+            },
+            "src_sys_org":{
+
+               "description": "Source System Origination",
+               "type": "string"
+            },
+            "src_sys_inst":{
+
+               "description": "Source System Instance",
+               "type": "string"
+            },
+            "ods_rec_crtd_dt":{
+
+               "description": "ODS Record Created Date",
+               "type": "string"
+            },
+            "ods_rec_updt_dt":{
+
+               "description": "ODS Record Updated Date",
+               "type": "string"
+            },
+            "pmt_ref_no":{
+
+               "description": "Payment Reference Number",
+               "type": "string"
+            },
+            "end_to_end_id":{
+
+               "description": "End to End Identifier",
+               "type": "number"
+            },
+            "dr_cr_cd":{
+
+               "description": "Debit Credit Code",
+               "type": "string"
+            },
+            "pmt_dir_cd":{
+
+               "description": "Payment Direction Code",
+               "type": "string"
+            },
+            "clnt_acct_co_no":{
+
+               "description": "Client Account Company Number",
+               "type": "number"
+            },
+            "clnt_acct_cc_no":{
+
+               "description": "Client Account Cost Center Number",
+               "type": "number"
+            },
+            "clnt_acct_appsys_id":{
+
+               "description": "Client Account Application System Identifier",
+               "type": "string"
+            },
+            "cnt_pty_acct_co_no":{
+
+               "description": "Counter Party Account Company Number",
+               "type": "number"
+            },
+            "cnt_pty_acct_cc_no":{
+
+               "description": "Counter Party Account Cost Center Number",
+               "type": "number"
+            },
+            "cnt_pty_acct_appsys_id":{
+
+               "description": "Counter Party Account Application System Identifer",
+               "type": "string"
+            },
+            "dr_am":{
+
+               "description": "Debit Amount",
+               "type": "number"
+            },
+            "dr_curncy_cd":{
+
+               "description": "Debit Currency Code",
+               "type": "string"
+            },
+            "cr_am":{
+
+               "description": "Credit Amount",
+               "type": "number"
+            },
+            "cr_curncy_cd":{
+
+               "description": "Credit Currency Code",
+               "type": "string"
+            },
+            "pmt_am":{
+
+               "description": "Payment Amount",
+               "type": "number"
+            },
+            "dlvry_chnl_cd":{
+
+               "description": "Delivery Channel Code",
+               "type": "string"
+            },
+            "dlvry_sub_chnl_cd":{
+
+               "description": "Delivery Sub Channel Code",
+               "type": "string"
+            },
+            "dlvry_chnl_ref_no":{
+
+               "description": "Delivery Channel Reference Number",
+               "type": "string"
+            },
+            "pmt_auth_dt_tm":{
+
+               "description": "Payment Authorization Date Time",
+               "type": "string"
+            },
+            "msg_extnl_ref_no":{
+
+               "description": "Message External Reference Number",
+               "type": "string"
+            },
+            "dlvry_chnl_shrt_de":{
+
+               "description": "Delivery Channel Short Description",
+               "type": "string"
+            },
+            "dlvry_chnl_de":{
+
+               "description": "Delivery Channel Description",
+               "type": "string"
+            },
+            "src_rec_crtd_dt":{
+
+               "description": "Source Record Created Date",
+               "type": "string"
+            },
+            "src_rec_ref_no":{
+
+               "description": "Source Record Reference Number",
+               "type": "number"
+            },
+            "src_rec_lst_updt_dt_tm":{
+
+               "description": "Source Record Last Update Date Time",
+               "type": "string"
+            },
+            "xfer_typ":{
+
+               "description": "Transfer Type",
+               "type": "string"
+            },
+            "am_deductable_in":{
+
+               "description": "Amount Deductable Indicator",
+               "type": "string"
+            },
+            "cmpnt_cd":{
+
+               "description": "Component Code",
+               "type": "string"
+            },
+            "cnfrm_no":{
+
+               "description": "Confirmation Number",
+               "type": "string"
+            },
+            "cns_cd":{
+
+               "description": "Consumer Code",
+               "type": "string"
+            },
+            "cntrc_mdia_rec_id":{
+
+               "description": "Contract Media Recording Identifier",
+               "type": "string"
+            },
+            "dscls_id":{
+
+               "description": "Disclosure Identification",
+               "type": "string"
+            },
+            "dup_ovrd_in":{
+
+               "description": "Duplicate Override Indicator",
+               "type": "string"
+            },
+            "fincl_ctr_devc_id":{
+
+               "description": "Financial Center Device Identification",
+               "type": "string"
+            },
+            "rvrsl_cd":{
+
+               "description": "Reversal Code",
+               "type": "string"
+            },
+            "xfer_crdnt_cd":{
+
+               "description": "Transfer Cardinality Code",
+               "type": "string"
+            },
+            "xfer_cd_in":{
+
+               "description": "Transfer Code Indicator",
+               "type": "string"
+            },
+            "wav_in":{
+
+               "description": "Waiver Indicator",
+               "type": "string"
+            },
+            "val_dt":{
+
+               "description": "Value Date",
+               "type": "string"
+            },
+            "pmt_typ":{
+
+               "description": "Payment Type",
+               "type": "string"
+            },
+            "xfer_mode_cd":{
+
+               "description": "Transfer Mode Code",
+               "type": "string"
+            },
+			"tran_dt":{
+
+               "description": "Transaction Date",
+               "type": "string"
+            },
+            "Payment_Status": {
+			"type": "array",
+			"items": { "$ref": "#/definitions/payment_status" }
+		    },
+		    "pmt_charge": {
+			"type": "array",
+			"items": { "$ref": "#/definitions/pmt_charge" }
+		    },
+		    "payment_account_entry": {
+			"type": "array",
+			"items": { "$ref": "#/definitions/payment_account_entry" }
+		    },
+		    "payment_execution": {
+			"type": "array",
+			"items": { "$ref": "#/definitions/payment_execution" }
+		    },
+		    "payment_party": {
+			"type": "array",
+			"items": { "$ref": "#/definitions/payment_party" }
+		    }
+			},
+			"required": [
+				"pmt_id","tran_dt"
+			],
+			"additionalProperties": false
+	}
+	},
+	"additionalProperties": false,
+	"definitions": {
+			"payment_status": {
+				"type": "object",
+				"properties": {
+					"pmt_stat_id":
+			{
+
+               "description": "Payment Status Identifier",
+               "type": "string"
+            },
+            "pmt_id":{
+
+               "description": "Payment Identifier",
+               "type": "string"
+            },
+            "src_sys_org":{
+
+               "description": "Source System Origination",
+               "type": "string"
+            },
+            "src_sys_inst":{
+
+               "description": "Source System Instance",
+               "type": "string"
+            },
+            "ods_rec_crtd_dt":{
+
+               "description": "ODS Record Created Date",
+               "type": "string"
+            },
+            "ods_rec_updt_dt":{
+
+               "description": "ODS Record Updated Date",
+               "type": "string"
+            },
+            "pmt_stat_cd":{
+
+               "description": "Payment Status Code",
+               "type": "string"
+            },
+            "pmt_stat_de":{
+
+               "description": "Payment Status Description",
+               "type": "string"
+            },
+            "pmt_stat_add_de":{
+
+               "description": "Payment Status Additional Description",
+               "type": "string"
+            },
+            "ev_dt_tm":{
+
+               "description": "Event Date Time",
+               "type": "string"
+            }
+				},
+				"required": ["pmt_stat_id", "pmt_id"],
+				"additionalProperties": false
+			},
+			"pmt_charge": {
+			"description": "Payment Charge",
+			"type": "object",
+			"properties": {
+			"pmt_chrg_id":
+			{
+
+               "description": "Payment Charge Identifier",
+               "type": "string"
+            },
+            "pmt_id":
+            {
+
+               "description": "Payment Identifier",
+               "type": "string"
+            },
+            "src_sys_org":
+            {
+
+               "description": "Source System Origination",
+               "type": "string"
+            },
+            "src_sys_inst":
+            {
+
+               "description": "Source System Instance",
+               "type": "string"
+            },
+            "ods_rec_crtd_dt":
+            {
+
+               "description": "ODS Record Created Date",
+               "type": "string"
+            },
+            "ods_rec_updt_dt":
+            {
+
+               "description": "ODS Record Updated Date",
+               "type": "string"
+            },
+            "bear_typ":
+            {
+
+               "description": "Bearer Type",
+               "type": "string"
+            },
+            "calc_bas_typ":
+            {
+
+               "description": "Calculation Basis Type",
+               "type": "string"
+            },
+            "chrg_pmt_mthd":
+            {
+
+               "description": "Charge Payment Method",
+               "type": "string"
+            },
+            "chrg_typ":
+            {
+
+               "description": "Charge Type",
+               "type": "string"
+            },
+            "sub_chrg_typ":
+            {
+
+               "description": "Sub Charge Type",
+               "type": "string"
+            },
+            "chrg_amt":
+            {
+
+               "description": "Charge Amount",
+               "type": "number"
+            },
+            "curncy_cd":
+            {
+
+               "description": "Currency Code",
+               "type": "string"
+            },
+            "exhng_rt":
+            {
+
+               "description": "Exchange Rate",
+               "type": "number"
+            },
+            "chrg_wav_in":
+            {
+
+               "description": "Charge Waiver Indicator",
+               "type": "string"
+            },
+            "chrg_wav_rsn_tx":
+            {
+
+               "description": "Charge Waiver Reason Text",
+               "type": "string"
+            }
+			},
+			"required": [
+				"pmt_chrg_id", "pmt_id", "bear_typ", "chrg_typ"
+			],
+			"additionalProperties": false
+		},
+		"payment_account_entry": {
+			"description": "Payment Account Entry",
+			"type": "object",
+			"properties": {
+			"pmt_acc_entr_id":{
+
+               "description": "Payment Account Entry Identifier",
+               "type": "string"
+            },
+            "pmt_id":{
+
+               "description": "Payment Identifier",
+               "type": "string"
+            },
+            "src_sys_org":{
+
+               "description": "Source System Origination",
+               "type": "string"
+            },
+            "src_sys_inst":{
+
+               "description": "Source System Instance",
+               "type": "string"
+            },
+            "ods_rec_crtd_dt":{
+
+               "description": "ODS Record Created Date",
+               "type": "string"
+            },
+            "ods_rec_updt_dt":{
+
+               "description": "ODS Record Updated Date",
+               "type": "string"
+            },
+            "prcs_bfr_ctoff_in":{
+
+               "description": "Processing Before Cutoff Indicator",
+               "type": "string"
+            },
+            "prcs_dt":{
+
+               "description": "Processing Date",
+               "type": "string"
+            },
+            "pstng_dt":{
+
+               "description": "Posting Date",
+               "type": "string"
+            },
+            "seq_no":{
+
+               "description": "Sequence Number",
+               "type": "number"
+            },
+            "tran_typ":{
+
+               "description": "Transaction Type",
+               "type": "string"
+            },
+            "trgt_sys_cd":{
+
+               "description": "Target System Code",
+               "type": "string"
+            },
+            "memo_de_tx":{
+
+               "description": "Memo Description Text",
+               "type": "string"
+            },
+            "pst_key_cd":{
+
+               "description": "Posting Key Code",
+               "type": "string"
+            },
+            "pst_key_de":{
+
+               "description": "Posting Key Description",
+               "type": "string"
+            },
+            "tran_am":{
+
+               "description": "Transaction Amount",
+               "type": "number"
+            },
+            "tran_curr_cd":{
+
+               "description": "Transaction Currency Code",
+               "type": "string"
+            }
+			},
+			"required": [
+				"pmt_acc_entr_id", "pmt_id"
+			],
+			"additionalProperties": false
+		},
+		"payment_execution": {
+			"description": "Payment Execution",
+			"type": "object",
+			"properties": {
+			"pmt_exeq_id":{
+
+               "description": "Payment Execution Identifier",
+               "type": "string"
+            },
+            "pmt_id":{
+
+               "description": "Payment Identifier",
+               "type": "string"
+            },
+            "src_sys_org":{
+
+               "description": "Source System Origination",
+               "type": "string"
+            },
+            "src_sys_inst":{
+
+               "description": "Source System Instance",
+               "type": "string"
+            },
+            "ods_rec_crtd_dt":{
+
+               "description": "ODS Record Created Date",
+               "type": "string"
+            },
+            "ods_rec_updt_dt":{
+
+               "description": "ODS Record Updated Date",
+               "type": "string"
+            },
+            "notc_of_chg_cd":{
+
+               "description": "Notice of Change Code",
+               "type": "string"
+            },
+            "chg_rs_tx":{
+
+               "description": "Change Reason Text",
+               "type": "string"
+            },
+            "chrg_bear_typ_cd":{
+
+               "description": "Charge Bearer Type Code",
+               "type": "string"
+            },
+            "pmt_initiation_dt_tm":{
+
+               "description": "Payment Initiation Date Time",
+               "type": "string"
+            },
+            "pmt_prps_cd":{
+
+               "description": "Payment Purpose Code",
+               "type": "string"
+            },
+            "prcs_typ_cd":{
+
+               "description": "Process Type Code",
+               "type": "string"
+            },
+            "val_dt_tm":{
+
+               "description": "Value Date Time",
+               "type": "string"
+            },
+            "availability_dt":{
+
+               "description": "Availability Date",
+               "type": "string"
+            },
+            "ntwk_in":{
+
+               "description": "Network Indicator",
+               "type": "string"
+            },
+            "tot_chrg_am":{
+
+               "description": "Total Charge Amount",
+               "type": "number"
+            },
+            "pmt_document": {
+			"type": "array",
+			"items": { "$ref": "#/definitions/pmt_document" }
+		    }
+			},
+			"required": [
+				"pmt_exeq_id", "pmt_id"
+			],
+			"additionalProperties": false
+		},
+		"pmt_document": {
+			"description": "Payment Document",
+			"type": "object",
+			"properties": {
+			"pmt_doc_id":{
+
+               "description": "Payment Document Identifier",
+               "type": "string"
+            },
+            "pmt_exeq_id":{
+
+               "description": "Payment Execution Identifier",
+               "type": "string"
+            },
+            "pmt_id":{
+
+               "description": "Payment Identifier",
+               "type": "string"
+            },
+            "src_sys_org":{
+
+               "description": "Source System Origination",
+               "type": "string"
+            },
+            "src_sys_inst":{
+
+               "description": "Source System Instance",
+               "type": "string"
+            },
+            "ods_rec_crtd_dt":{
+
+               "description": "ODS Record Created Date",
+               "type": "string"
+            },
+            "ods_rec_updt_dt":{
+
+               "description": "ODS Record Updated Date",
+               "type": "string"
+            },
+            "strd_pmt_doc_typ_cd":{
+
+               "description": "Structured Payment Document Type Code",
+               "type": "string"
+            },
+            "strd_pmt_info":{
+
+               "description": "Structured Payment Information",
+               "type": "string"
+            },
+            "strd_pmt_doc_dt_tm":{
+
+               "description": "Structured Payment Document Date Time",
+               "type": "string"
+            },
+            "lang":{
+
+               "description": "Language",
+               "type": "string"
+            },
+            "ustrd_pmt_info":{
+
+               "description": "UnStructured Payment Information",
+               "type": "string"
+            },
+            "unstrd_doc_typ":{
+
+               "description": "UnStructured Payment Type",
+               "type": "string"
+            },
+            "strd_doc_strata_id":{
+
+               "description": "Structured Document Strata Identifier",
+               "type": "string"
+            },
+            "strd_doc_strata_arch_ind":{
+
+               "description": "Structured Document Archived Indicator",
+               "type": "string"
+            },
+            "strd_doc_strata_arch_dt":{
+
+               "description": "Structured Document Archived Date",
+               "type": "string"
+            }
+			},
+			"required": [
+				"pmt_doc_id", "pmt_exeq_id", "pmt_id"
+			],
+			"additionalProperties": false
+		},
+		"payment_party": {
+			"description": "Payment Party",
+			"type": "object",
+			"properties": {
+			"pmt_pty_id":{
+
+               "description": "Payment Party Identifier",
+               "type": "string"
+            },
+            "pmt_id":{
+
+               "description": "Payment Identifier",
+               "type": "string"
+            },
+            "rte_no":{
+
+               "description": "Routing Number",
+               "type": "string"
+            },
+            "pty_id":{
+
+               "description": "Party Identifier",
+               "type": "number"
+            },
+            "src_sys_org":{
+
+               "description": "Source System Origination",
+               "type": "string"
+            },
+            "src_sys_inst":{
+
+               "description": "Source System Instance",
+               "type": "string"
+            },
+            "ods_rec_crtd_dt":{
+
+               "description": "ODS Record Created Date",
+               "type": "string"
+            },
+            "ods_rec_updt_dt":{
+
+               "description": "ODS Record Updated Date",
+               "type": "string"
+            },
+            "pmt_pty_role_typ":{
+
+               "description": "Payment Party Role Type",
+               "type": "string"
+            },
+            "addr_lin_1_de":{
+
+               "description": "Address Line 1 Description",
+               "type": "string"
+            },
+            "addr_lin_2_de":{
+
+               "description": "Address Line 2 Description",
+               "type": "string"
+            },
+            "addr_lin_3_de":{
+
+               "description": "Address Line 3 Description",
+               "type": "string"
+            },
+            "addr_lin_4_de":{
+
+               "description": "Address Line 4 Description",
+               "type": "string"
+            },
+            "addr_lin_5_de":{
+
+               "description": "Address Line 5 Description",
+               "type": "string"
+            },
+            "addr_typ_cd":{
+
+               "description": "Address Type Code",
+               "type": "string"
+            },
+            "cntry_sub_div_cd":{
+
+               "description": "Country Sub Division Code",
+               "type": "string"
+            },
+            "org_bic":{
+
+               "description": "Organization BIC",
+               "type": "string"
+            },
+            "pty_id_typ":{
+
+               "description": "Party Identifier Type",
+               "type": "string"
+            },
+            "pty_nm":{
+
+               "description": "Party Name",
+               "type": "string"
+            },
+            "pst_cd":{
+
+               "description": "Post Code",
+               "type": "string"
+            },
+            "pstl_cntry_cd":{
+
+               "description": "Postal Country Code",
+               "type": "string"
+            },
+            "prsn_ref_no":{
+
+               "description": "Person Reference Number",
+               "type": "string"
+            },
+            "town_nm":{
+
+               "description": "Town Name",
+               "type": "string"
+            },
+            "pstl_cntry_nm":{
+
+               "description": "Postal Country Name",
+               "type": "string"
+            },
+            "cntry_sub_div_nm":{
+
+               "description": "Country Sub Division Name",
+               "type": "string"
+            },
+            "pty_cntct_info_tx":{
+
+               "description": "Party Contact Info Text",
+               "type": "string"
+            },
+            "intrnl_pty_no":{
+
+               "description": "Internal Party Number",
+               "type": "string"
+            },
+            "nbkid":{
+
+               "description": "National Bank Identifier",
+               "type": "string"
+            },
+            "clr_sys_ref_typ":{
+
+               "description": "Clearing System Reference Type",
+               "type": "string"
+            },
+            "xref_cd":{
+
+               "description": "Cross Reference Code",
+               "type": "string"
+            },
+            "bac_onln_cd":{
+
+               "description": "Bank America Corporation Online Code",
+               "type": "string"
+            },
+            "guid":{
+
+               "description": "GUID",
+               "type": "string"
+            },
+            "acct_titl":{
+
+               "description": "Account Title",
+               "type": "string"
+            },
+            "acct_stat_cd":{
+
+               "description": "Account Status Code",
+               "type": "string"
+            },
+            "acct_typ_de":{
+
+               "description": "Account Type Description",
+               "type": "string"
+            },
+            "acct_nm":{
+
+               "description": "Account Name",
+               "type": "string"
+            },
+            "acct_typ":{
+
+               "description": "Account Type",
+               "type": "string"
+            },
+            "alt_acct_id":{
+
+               "description": "Alternate Account Indentifier",
+               "type": "string"
+            },
+            "alt_acct_id_typ":{
+
+               "description": "Alternate Account Identifier Type",
+               "type": "string"
+            },
+            "alt_acct_no":{
+
+               "description": "Alternate Account Number",
+               "type": "string"
+            },
+            "alt_acct_typ":{
+
+               "description": "Alternate Account Type",
+               "type": "string"
+            },
+            "alt_enty_cd":{
+
+               "description": "Alternate Entity Code",
+               "type": "string"
+            },
+            "alt_prod_cd":{
+
+               "description": "Alternate Product Code",
+               "type": "string"
+            },
+            "prod_cd":{
+
+               "description": "Product Code",
+               "type": "string"
+            },
+            "sub_prod_cd":{
+
+               "description": "Sub Product Code",
+               "type": "string"
+            },
+            "acct_expry_mo_yr_tx":{
+
+               "description": "Account Expiry Month Year Text",
+               "type": "string"
+            },
+            "acct_own_fl":{
+
+               "description": "Account Ownership Flag",
+               "type": "string"
+            },
+            "acct_auth_cd":{
+
+               "description": "Account Authoriztion Code",
+               "type": "string"
+            },
+            "acct_auth_ntwk_cd":{
+
+               "description": "Account Authorization Network Code",
+               "type": "string"
+            },
+            "acct_ref_no":{
+
+               "description": "Account Reference Number",
+               "type": "string"
+            },
+            "avbl_bal_am":{
+
+               "description": "Available Balance Amount",
+               "type": "number"
+            },
+            "bac_corp_own_in":{
+
+               "description": "Bank of America Corporation Ownership Indicator",
+               "type": "string"
+            },
+            "enty_cd":{
+
+               "description": "Entity Code",
+               "type": "string"
+            },
+            "sub_sys_id":{
+
+               "description": "Sub System Identifier",
+               "type": "string"
+            },
+            "sys_id":{
+
+               "description": "System Identifier",
+               "type": "string"
+            }
+			},
+			"required": [
+				"pmt_pty_id", "pmt_id", "pmt_pty_role_typ"
+			],
+			"additionalProperties": false
+		}
+
+		}
+}

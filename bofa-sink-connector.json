@@ -1,0 +1,15 @@
+{
+    "name": "mongodb-sink-connector",
+    "config": {
+        "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+        "tasks.max": "16",
+        "topics": "paymentods.mmps.payments.s8",
+        "database": "payodsdb",
+        "collection": "payodspoccollection",
+        "connection.uri":"mongodb://payments-ods-poc-mongo-vm-east:27018,payments-ods-poc-mongo-vm-central:27018,payments-ods-poc-mongo-vm-west: 27018,payments-ods-poc-mongo-sh2-vm-east: 27018,payments-ods-poc-mongo-sh2-vm-central: 27018,payments-ods-poc-mongo-sh2-vm-west:27018",
+        "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "key.converter.schemas.enable": "false",
+        "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "value.converter.schemas.enable": "false"
+    }
+}
